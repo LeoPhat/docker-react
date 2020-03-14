@@ -4,7 +4,7 @@ services:
     - docker
 
 before_install:
-    - docker build -t LeoPhat/react-docker -f Dockerfile.dev .
+    - docker build -t react-docker -f Dockerfile.dev .
 
 script:    
-    - docker run -e CI=true LeoPhat/docker-react npm run test
+    - docker run -e CI=true react-docker npm run test
